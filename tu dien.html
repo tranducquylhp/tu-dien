@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="en" value="" type="text">
+    <button type="button" onclick="dich()"> Translate</button>
+    <p id="translate"></p>
+    <script>
+        let en=["hello","goodbye","sorry","thank you","learn"];
+        let vn=["xin chao","tam biet","xin loi","cam on","hoc"];
+        function dich() {
+            if (en.indexOf(document.getElementById("en").value) !== -1) {
+                document.getElementById("translate").innerText=vn[en.indexOf(document.getElementById("en").value)];
+            } else document.getElementById("translate").innerText="Khong tim thay";
+        }
+    </script>
+</body>
+</html>
